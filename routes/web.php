@@ -16,4 +16,4 @@ use Illuminate\Http\Request;
 */
 
 Route::post('/data', [PaymentContreller::class, 'getDataFromApi']);
-Route::get('/data/{user_id}', [PaymentContreller::class, 'passDataToView'])->name('data.view');
+//Route::get('/data/{user_id}', [PaymentContreller::class, 'passDataToView'])->name('data.view');

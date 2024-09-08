@@ -13,11 +13,15 @@ class PaymentContreller extends Controller
     public function getDataFromApi(Request $request)
     {
         $userId = $request->input('user_id');
-        return redirect()->route('data.view', ['user_id' => $userId]);
+        $username = $request->input('username');
+
+        Log::info("Received userId: $userId, username: $username");
+//        $userId = $request->input('user_id');
+//        return redirect()->route('data.view', ['user_id' => $userId]);
     }
-    public function passDataToView($userId)
-    {
-        Log::info('userId: ' . $userId);
-        return view('welcome', ['userId' => $userId]);
-    }
+//    public function passDataToView($userId)
+//    {
+//        Log::info('userId: ' . $userId);
+//        return view('welcome', ['userId' => $userId]);
+//    }
 }
